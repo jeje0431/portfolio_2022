@@ -1,0 +1,155 @@
+nav ul {
+    list-style-type: none;
+}
+
+#menu {
+    margin-top: 10px;
+    position: relative;
+    height: 100px;
+}
+
+#headl {
+    width: 210px;
+    height: 80px;
+    border: 5px solid black;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: black;
+    line-height: 75px;  
+    float: left;
+}
+
+#headl a {
+    display: block;
+    width: 210px;
+    margin-left: 15px;
+}
+
+#menu:hover #headl {
+    transition: all 0.4s;
+    width: 1200px;
+}
+
+#menu:hover #headl a {
+    transition: all 0.4s;
+    opacity: 0;
+}
+
+#lnb {
+    position: absolute;
+    right: 0;
+    height: 80px;
+    margin-top: 45px;
+}
+
+#lnb li {
+    float: right;
+    padding: 0 1.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    opacity: 0;
+}
+
+#menu:hover #lnb li {
+    transition: all 1.2s;
+    opacity: 1;
+}
+
+#lnb li>a {
+     padding: 2px 8px;
+}
+
+#lnb li:hover a {
+    transition: all 0.4s;
+    background-color: black;
+    color: white;
+}
+
+#contbox {
+    margin-left:000px; 
+}
+
+#train {  
+    margin-top: 100px;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+#train::-webkit-scrollbar {
+    display: none;
+}
+
+.thum {
+    display: inline-block;
+    position:relative;
+    margin-left: 30px;
+}
+
+.thum:first-of-type {
+    margin-left: 0;
+}
+
+.txtbox {
+    margin-top: -15px;
+    margin-left: 15px;
+}
+
+.thum:hover {
+    
+}
+
+.boxtxt {
+    font-size: 0.9em;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    padding: 0.2em 0.5em;
+}
+
+.txt {
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: -0.05em;
+    margin-top: 10px;
+}
+
+
+
+/* line.js 플러그인에서 hover effect 스타일 첫번째 */
+.border-continuous div {
+	position: absolute;
+}
+.border-continuous div:nth-child(1) {
+	background: #2c3e52;
+	top: 0;
+	left: 0;
+	background-color: white;
+	height: 4px;
+	transition: width 0.2s linear 0s;
+	width: 0%;
+}
+.border-continuous div:nth-child(2) {
+	top: 0;
+	right: 0;
+	background-color: white;
+	width: 4px;
+	transition: height 0.2s linear 0.2s;
+	height: 0%;
+}
+.border-continuous div:nth-child(3) {
+	right: 0;
+	bottom: 0;
+	background-color: white;
+	height: 4px;
+	transition: width 0.2s linear 0.4s;
+	width: 0%;
+}
+.border-continuous div:nth-child(4) {
+	bottom: 0;
+	left: 0;
+	background-color: white;
+	width: 4px;
+	transition: height 0.2s linear 0.6s;
+	height: 0%;
+}
+
