@@ -1,0 +1,453 @@
+article {
+    overflow: auto;
+}
+
+.one {
+    width: calc(100% / 3);
+}
+
+.two {
+    width: calc(100% / 3 * 2);
+}
+
+#mv {
+    float: left;
+    overflow: hidden;
+    position: relative;        
+}
+
+#move {
+    width: 300%;
+    height: 450px;
+}
+
+.slide{
+    width: calc(100% / 3);
+    float: left;
+}
+
+.slide img,
+.slide a {
+    display: block;
+}
+
+.left, .right {
+    position: absolute;    
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4em;
+    background-color: transparent;
+    border: none;
+    color: #222222;
+    outline: none;
+    cursor: pointer;
+}
+
+.left {
+    left: 30px;
+}
+
+.right {
+    right: 30px;
+}
+
+#pagi {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+.toggle, .dot {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.active::after { 
+    content: "";
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#pause, #play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 17px;
+}
+
+#pause span {
+    display: inline-block;
+    background-color: black;
+    width: 2px;
+    height: 8px;
+    margin: 0 1px;
+}
+
+#play span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-left: 8px solid black;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+
+#play{
+    display: none; 
+}
+    
+
+
+#order {
+    float: left;
+}
+
+#order>div {
+    height: 225px;
+    color: white;
+    padding: 25px;
+}
+
+#order>div:first-of-type {
+    background-image: url(../images/thumb_online.jpg);
+}
+
+#order>div:last-of-type {
+    background-image: url(../images/thumb_gift.jpg);
+}
+
+#order p {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#order a {
+    display: block;
+    width: 100px;
+    height: 30px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+#menu, #store, #news {
+    float: left;
+    height: 350px;
+}
+
+#menu>div {
+    height: 175px;
+    position: relative;
+}
+
+#menu a, #menu img {
+    display: block;
+}
+
+#menu h2 {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    color: white;
+    font-size: 0.8em;
+    background-color: black;
+    padding: 2px 10px;
+    font-weight: 800;
+    border-radius: 2px;
+}
+
+#menu>div:first-of-type {
+    background-image: url(../images/thumb_best.jpg);
+}
+
+#menu>div:last-of-type {
+    background-image: url(../images/thumb_hot.jpg);
+}
+
+#menu a {
+    width: 100px;
+    height: 30px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+#menu div {
+    overflow: auto;
+}
+
+#menu>div:first-of-type>a {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+}
+
+#menu>div:last-of-type>a {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+} 
+
+h2 {
+    display: inline;
+    left: 30px;
+    top: 20px;
+    color: white;
+    font-size: 0.8em;
+    background-color: black;
+    padding: 2px 10px;
+    font-weight: 800;
+    border-radius: 2px;
+}
+
+#store {
+    background-color: #f5d8ae;
+    padding: 28px 24px;
+}
+
+.big {
+    font-size: 1.25em;
+    font-weight: bold;
+    background-image: url(../images/img_shopSch.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 45px;
+    padding-top: 20px;
+    margin-bottom: 15px;
+    letter-spacing: -0.08em;
+}
+
+#store form {
+    overflow: auto;
+    margin-bottom: 60px;
+}
+
+
+#store input {
+    width: calc(100% * 0.7);
+    height: 40px;
+    border: none;
+    background-color: white;
+    float: left;
+    border-radius: 2px 0 0 2px;
+}
+
+#searchbtn {
+    width: 70px;
+    height: 40px;
+    color: white;
+    background-color: #291d19;
+    font-weight: bold;
+    float: left;
+    border-radius: 0px 2px 2px 0px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    letter-spacing: -0.08em;
+}
+
+#store hr {
+    border: none;
+    height: 1px;
+    background-color: #ffbfad;
+}
+
+.sname, .sdetail {
+    letter-spacing: -0.08em;
+}
+
+.sname {
+    font-size: 0.9em;
+    margin-top: 27px;
+    margin-bottom: 0.6em;
+}
+
+.sname a {
+    font-size: 0.8em;
+    color: black;
+    border: 1px solid black;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin: 0 2px;
+}
+
+.storename {
+    margin-right: 8px;
+}
+
+.sdetail {
+    font-size: 0.75em;
+}
+
+#news {
+    padding: 28px 24px;
+    background-color: #b3e1ce;
+}
+
+.titlebox {
+    overflow: auto;
+}
+
+.titlebox h2 {
+    float: left;
+}
+
+.titlebox a {
+    float: right;
+}
+
+
+.contbox {
+    margin-top: 25px;
+    list-style: none;  
+}
+
+.contbox a {
+    display: block;
+    overflow: auto;
+    margin-bottom: 8px;
+}
+
+.contbox a img {
+    float: left;
+    width: 75px;
+}
+
+.contbox a div {
+    float: left;
+    margin-left: 15px;
+    width: calc(100% - 135px);
+    padding-top: 6px;
+}
+
+.contbox a p {
+    color: #281c18;
+    font-size: 0.85em;
+    letter-spacing: -0.05em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contbox a span {
+    font-size: 0.7em;
+    letter-spacing: -0.05em;
+    color: #666666;
+}
+
+.contbox a:hover p {
+    color: #ed1c24;
+}
+
+#franchise, #sns {
+    float: left;
+    height: 194px;
+}
+
+#franchise {
+    overflow: auto;
+}
+
+#frantxt {
+    float: left;
+    padding-top: 38px;
+}
+
+.franbig {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    
+}
+
+.fransmall {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+#franicon {
+    float: right;
+    padding-right: 18px;
+    padding-top: 40px;
+}
+
+
+#frantxt a {
+    color: black;
+    border: 2px solid black;
+    border-radius: 2px;
+    font-size: 0.85em;
+    padding: 0.3em 1.1em;
+    text-align: center;
+}
+
+#franicon>div {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#franicon img {
+    position: relative;
+    vertical-align: middle;
+    z-index: 2;
+}
+
+#franicon a {
+    position: relative;
+    background-color: #281c18;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 1.2em 2em;
+    padding-left: 3.5em;
+    margin-left: -30px;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+#franicon a::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    width: 20px;
+    border-left: 13px solid #281c18;
+    border-top: 20px solid transparent;
+    border-bottom: 25px solid transparent;
+    right: -32.5px;
+}
+
+#franicon div:last-of-type a::after {
+    content: none;
+}
+
+#sns {
+    background-color: #f7f6f5;
+    text-align: center;
+    padding-top: 71px;
+}
+
+#sns a {
+    margin: 0 8px;
+}

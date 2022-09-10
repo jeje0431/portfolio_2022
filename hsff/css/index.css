@@ -1,0 +1,240 @@
+#mv {
+    background-image: url(../images/visual_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    height: 425px;
+}
+
+#mv .cen {
+    position: relative;
+}
+
+.slide {
+    overflow: auto;
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+
+
+.slide:first-of-type {
+    display: block;
+}
+
+.slideright {
+    overflow: hidden;
+    width: 50%;
+    height: 270px;
+    float: right;
+    position: relative;
+}
+
+.slideleft {
+    overflow: hidden;
+    width: 50%;
+    height: 270px;
+    float: left;
+    background-color: rgba(255,255,255,0.5);
+    position: relative;
+    padding: 50px 28px 28px 28px;
+}
+
+.stag {
+    font-family: 'NanumSquare', sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-weight: bold;
+    background-color: #2b6097;
+    padding: 10px 35px;
+}
+
+.sbig {
+    color: #2b6097;
+    font-family: 'NanumSquare', sans-serif;
+    font-size: 1.9em;
+    font-weight: bold;
+    letter-spacing: -0.04em;
+    margin-top: 17px;
+}
+
+.ssmall, .sdate {
+    color: #2b6097;
+    font-family: 'NanumSquare', sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.slideleft a {
+    position: absolute;
+    right: 28px;
+    bottom: 25px;
+    color: #2b6097;
+    font-size: 0.95em;
+    border:  1px solid #2b6097;
+    padding: 8px 30px;
+}
+
+.slideright img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pagi {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 290px;
+    list-style: none;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #2b6097;
+    float: left;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #2b6097;
+}
+
+#recent {
+    margin:  50px 0;
+}
+
+#recent .cen {
+    overflow: auto;
+}
+
+.three {
+    width: calc((100% - 40px) / 3);
+    float: left;
+    margin-right: 20px;
+    padding: 30px;
+    padding-top: 20px;
+    border: 1px solid #dcdcdc;
+}
+
+.three:last-of-type {
+    margin-right: 0;
+}
+
+.title {
+    text-align: center;
+    color: #2b6097;
+    font-family: 'NanumSquare', sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.title a {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    width: 40px;
+    height: 40px;
+}
+
+.title a::before {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 3px;
+    background-color: #1585ff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: transform 0.4s;
+}
+
+.title a::after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 13px;
+    background-color: #1585ff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: transform 0.4s;
+}
+
+.title a:hover::after,
+.title a:hover::before {
+    transform: translate(-50%,-50%) rotate(90deg);
+}
+
+.cont {
+    list-style: none;
+    font-size: 0.9em;
+}
+
+.cont a {
+    color: #555;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cont a:hover {
+    text-decoration: underline;
+}
+
+.cont span {
+    color: #777;
+    display: block;
+}
+
+.cont li {
+    margin-bottom: 11px;
+}
+
+@media all and (max-width:900px){
+    .slideleft,
+    .slideright {
+        float: none;
+        width: 100%;
+    }
+    .slideright {
+        height: 200px;
+    }
+    
+    #mv {
+        height: 500px;
+        padding: 0;
+    }
+    .pagi {
+        top: 475px;
+    }
+    .sbig {
+        font-size: 1.3em;
+    }
+    .ssmall {
+        font-size: 0.95em;
+    }
+}
+
+@media all and (max-width:720px){
+    .three {
+        float: none;
+        width: calc(100% - 20px);
+        margin: 30px 10px;
+        
+    }
+}

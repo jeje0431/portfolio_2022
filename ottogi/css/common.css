@@ -1,0 +1,509 @@
+@charset "utf-8";
+@import url(http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+body { font-family: 'Spoqa Han Sans', sans-serif; }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.cen {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto; 
+}
+
+header {
+    background-color: #f2f100;
+}
+
+#header_top {
+/*    overflow: auto;*/
+    height: 128px;
+}
+
+#htop_left,
+#htop_right {
+    width: 100px;
+    float: left;
+}
+
+#ham {
+    width: 64px;
+    height: 64px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer; 
+    outline: none;
+}
+
+#htop_center {
+    width: calc(100% - 200px);
+    float: left;
+    padding-top: 18px;
+    text-align: center;
+}
+
+#htop_right {
+    text-align: right;
+    padding-top: 35px; 
+    padding-right: 12px;
+}
+
+#lang {
+    display: inline-block;
+    position: relative;
+}
+
+#langsel {
+    position: absolute;
+    z-index: 10000;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+
+#langsel a {
+    display: block;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    width: 100px;
+    padding: 0.3em 0;
+    text-align: center;
+}
+
+/*여기부터 lnb 스타일*/
+
+#lnb {
+    height: 77px;
+}
+
+.main {
+    float: left;
+    width: calc(100% / 6);
+}
+
+.main>a {
+    display: block;
+    width: 100%;
+    height: 77px;
+    text-align: center;
+    line-height: 77px;
+    font-size: 1.2em;
+    color: black;
+}
+
+.main:hover>a {
+    color: #dc2c34;
+    border-bottom: 4px solid #dc2c34;
+}
+
+.main>a::after {
+    content: "|";
+    float: right;
+    font-weight: bold;
+    color: gray;
+    font-size: 0.8em;
+}
+
+.main:last-of-type>a::after {
+    content: none;
+}
+
+/*여기서부터 sub*/
+
+.sub {
+    position: absolute;
+    z-index: 999;
+    background-color: white;
+    height: 245px;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    padding-top: 0px;
+    display: none;
+    transition: padding-top 0.4s;
+/*    color: transparent;*/
+}
+
+.show {
+    padding-top: 20px;
+}
+
+.subleft {
+    float: left;
+    width: 25%;
+    padding-left: 15px;
+}
+
+.sub>.cen>ul {
+    float: left;
+    width: 50%;
+}
+
+.subright {
+    float: left;
+    width: 25%;
+}
+
+.m_kor {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 25px;
+}
+.m_eng {
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+.m_cont {
+    color: #666666;
+    font-size: 0.9em;
+    letter-spacing: -0.08em;
+}
+
+.subright a {
+    display: block;
+    width: 224px;
+    height: 40px;
+    border: 2px solid #dcdcdc;
+    text-align: center;
+    line-height: 35px;
+    color: #666666;
+    margin-bottom: 5px;
+}
+
+.subright a::after {
+    content: url(../images/gnb_btn.jpg);
+    margin-left: 10px;
+}
+
+
+.sub>.cen>ul {
+    position: relative;
+    padding-left: 30px;
+    min-height: 150px;
+}
+
+.sub>.cen>ul::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: #e1e1e1;
+    left: 50%;
+    top: 0;
+}
+
+.sub>.cen>ul a {
+    color: #666666;
+    font-weight: bold;
+    font-size: 0.9em; 
+    display: block;
+    padding: 0.3em 1.5em;
+}
+
+.ssub {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: none;
+}
+
+#mlnb {display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.mmain {
+    border-bottom: 1px solid #e76c71;
+}
+
+.mmain>a { 
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 1em;
+    background-color: #dc2c34;
+    color: white;
+    font-size: 1.25em;
+}
+
+.mmain>a>span {
+    float: right;
+    display: block;
+    width: 23px;
+    height: 23px;
+    margin-top: 18px;
+    margin-right: 18px;
+    background-image: url(../images/nav_on.png);
+}
+
+.mmain>a>.minus {
+    background-image: url(../images/nav_off.png);
+}
+
+.msub {
+    background-color: #9a1f24;
+    padding: 1.8em 2.2em;
+    display: none;
+}
+
+.msub a {
+    display: block;
+    color: white;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+.mssub a {
+    font-size: 0.9em;
+    padding-left: 0.5em;
+}
+
+.mssub a::before {
+    content: "- ";
+}
+
+.msub>li {
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 1.8em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.deco {
+    text-align: center;
+    font-size: 2.2em;
+}
+
+.deco::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    color: red;
+    border-bottom: 1px solid red;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.h3sub {
+    text-align: center;
+    color: #666666;
+    margin-top: 17px;
+    margin-bottom: 15px;
+    
+}
+
+#ftop {
+    background-color: #f7f7f7;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    overflow: auto;
+}
+
+#flink {
+    float: left;
+    padding: 20px 0;
+}
+
+#flink a {
+    color: #333;
+    margin-right: 2em;
+}
+#fsns {
+    float: right;
+    padding: 12px 0;
+}
+
+#fsns a {
+    margin: 3px;
+}
+
+#fbot {
+    overflow: auto;
+    padding: 25px 0;
+}
+
+#fbotleft {
+    float: left;
+}
+
+#fbotcen {
+    float: left;
+    font-size: 0.8em;
+    line-height: 1.8em;
+    color: #333;
+    width: calc(100% - 481px);
+    padding: 0 20px;
+    word-break: keep-all;
+    word-wrap: normal;
+}
+
+#fbotcen p {
+    margin-bottom: 1em;
+}
+
+#fbotcen span {
+    display: inline-block;
+}
+
+#fbotcen span::after {
+    content: "|";
+    margin-left: 1em;
+    margin-right: 0.8em;
+}
+
+#fbotcen span:last-of-type::after {
+    content: none;
+}
+
+#fbotrit {
+    float: right;
+}
+
+#top {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 0, 0, 0.7);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+#top img {
+    transform: translate(-50%, -50%)rotate(-90deg);
+    width: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+@media all and (max-width: 900px) {
+    .subright a {width: 100%}
+    .subleft {display: none;}
+    .subcenter {width: calc(100% / 3 * 2) !important;}
+    .subright {width: calc(100% / 3);}
+    .subcenter>li>a {width: 50%;}
+    #fbotrit {
+        width: 100px;
+    }
+    #fbotleft {
+        width: 120px;
+    }
+    #fbotcen {
+        width: calc(100% - 240px);
+    }
+    #flink a {
+        margin-right: 1em;
+    }
+}
+
+/*모바일 스타일*/
+@media all and (max-width: 640px) {
+    #lnb {display: none;}
+    h1 img {height: 62px;}
+    #header_top {height: 94px;}
+    #ham {height: 94px;} 
+    #ham img {width: 23px;}
+    
+    #ftop {
+        background-color: transparent;
+        border: none;
+        padding: 0 10px;
+    }
+    
+    #ftop .cen {
+        overflow: auto;
+    }
+    
+    #flink {
+        overflow: auto;
+        float: none;
+    }
+    
+    #flink a {
+        background-color: #f7f7f7;
+        border: 1px solid #e4e4e4;
+        display: block;
+        width: 50%;
+        padding: 0.8em;
+        text-align: center;
+        float: left;
+        margin-right: 0;
+    }
+    
+    #flink a:nth-of-type(1),
+    #flink a:nth-of-type(2) {
+        border-bottom: none;
+    }
+        
+    #flink a:nth-of-type(2),
+    #flink a:nth-of-type(4) {
+        border-left: none;
+    }
+    
+    #fsns {
+        float: none;
+        text-align: center;
+    }
+    
+    #fbotleft, 
+    #fbotcen, 
+    #fbotrit {
+        float: none;
+    }
+    #fbot {
+        text-align: center;
+        padding-top: 0;
+    }
+    
+    #fbotcen {
+        width: 100%;
+        padding: 0 10px;
+        margin-left: 0;
+    }
+    
+    #fbotleft {
+        width: 150px;
+    }
+    #fbotrit {
+        width: 300px;
+    }
+}
+
+/*갤럭시fold 대응 400px~280px*/
+
+@media all and (max-width: 400px) {
+    #flink a {
+        font-size: 0.8em;
+        letter-spacing: -0.08em;
+    }    
+    #fbotrit {width: calc(100% - 40px);}
+}
+
+
+
+
+

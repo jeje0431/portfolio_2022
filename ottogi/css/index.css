@@ -1,0 +1,640 @@
+#mv {
+    height: 530px;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 530px;
+    overflow: hidden;
+    display: none;
+}
+
+.slide:first-of-type{
+    display: block;
+}
+
+.slide img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100%;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.prev {left: 40px;}
+.next {right: 40px;}
+
+.dots {
+    position: absolute;
+    left: 8%;
+    bottom: 70px;
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 3px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.dot:hover,
+.active {
+    background-color: #fef100;
+}
+
+.play {
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    margin: 0 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/btn_play.png);
+    cursor: pointer;
+}
+
+.pause {
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    margin: 0 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/btn_stop.png);
+    cursor: pointer;
+}
+
+.play:hover, .pause:hover{
+    outline: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#direct,#news {
+    overflow: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.dbox {
+    float: left;
+    width: calc((100% - 36px) / 4);
+    color: white;
+    text-align: center;
+    margin-right: 12px;
+    padding-top: 7.5%;
+    padding-bottom: 7.5%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dbox:last-of-type{
+    margin-right: 0;
+}
+
+.dbox:nth-of-type(1) {background-image: url(../images/bgM5.jpg);}
+.dbox:nth-of-type(2) {background-image: url(../images/bgM1.jpg);}
+.dbox:nth-of-type(3) {background-image: url(../images/bgM3.jpg);}
+.dbox:nth-of-type(4) {background-image: url(../images/bgM4.jpg);}
+.dbig {font-size: 1.7em; font-weight: bold;}
+.dmid {font-size: 1.2em;}
+.dsmall {font-size: 0.8em; font-weight: bold;}
+
+
+.nbox {
+    float: left;
+    width: calc((100% - 36px) / 4);
+    color: #333333;  
+    margin-right: 12px;
+    padding-top: 7.5%;
+    padding-bottom: 7.5%;
+}
+
+
+.nbox:last-of-type{
+    margin-right: 0;
+}
+
+#more {
+    color: #dc2c34;
+    font-size: 0.9em;
+    margin-left: 87px;
+}
+
+.nbig a {
+    font-size: 1.1em;
+    color: #333333;
+    display: block;
+    height: 70px;
+    line-height: 1.2em;
+}
+
+.nmid a {
+    font-size: 0.9em;
+    letter-spacing: -0.02em;
+    color: #666;
+    display: block;
+    margin-bottom: 1.2em;
+    line-height: 1.5em;
+}
+
+.ndate {
+    font-size: 0.9em;
+    color: #333;
+}
+
+#en {
+    overflow: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+#event, #newgood {
+    width: 50%;
+    float: left;
+}
+
+.contslider .slick-dots {
+    min-width: 124px;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    list-style: none;
+    background-color: rgba(0,0,0,0.2);
+    padding: 4px 24px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.contslider .slick-dots>li {
+    display: inline-block;
+}
+
+.contslider .slick-dots>li>button { 
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: white;
+    margin: 4px; 
+    color: transparent;
+    cursor: pointer;
+}
+
+.contslider .slick-active>button {
+    background-color: #fef100!important;
+}
+
+.contslider a>img {
+    width: 100%;
+}
+
+#newgoodbox {
+    overflow: auto;
+    position: relative;
+}
+
+#nslider, #new {
+    width: 50%;
+    float: left;
+}
+#nslider .slick-slide {
+    position: relative;
+}
+
+#nslider .slick-slide::after,
+#new::after {
+    content: "NEW";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #dc2c34;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 0.75em;
+    text-align: center;
+    line-height: 40px;
+}
+
+#nslider a>img {
+    width: 100%;
+}
+
+#new {
+    border: 1px solid #e1e1e1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+
+#new img {
+    height: 70%;
+}
+
+.newbig {
+    font-size: 1.1em;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.newsmall {
+    font-size: 0.9em;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#pop {
+    background-image: url(../images/visual_06.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0 80px 0;
+    overflow: hidden;
+}
+
+#pop .deco,
+#pop .h3sub {
+    color: white;
+}
+
+#pop .deco::after {
+    border-bottom-color: white;
+}
+
+#pslider {
+    margin-top: 30px;
+}
+
+#pslider a {
+    margin: 0 10px; 
+    background-color: white;
+    height: 320px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 2px;
+    position: relative;
+}
+
+#pslider a>img {
+    height: 60%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#pslider a>div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    border-top: 1px solid #e1e1e1;
+}
+
+#pslider a>div::before {
+    content: "";
+    display: block;
+    width: 17px;
+    height: 9px;
+    border-bottom: 9px solid #e1e1e1;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -9px;
+    box-sizing: border-box;
+}
+
+#pslider a>div::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 8px;
+    border-bottom: 8px solid white;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -8px;
+    box-sizing: border-box;
+}
+
+.pbig {
+    font-size: 1.1em;
+    color: #666;
+    margin-top: 1em;
+    padding: 0 1em;
+    height: 60px;
+}
+
+.psmall {
+    font-size: 0.85em;
+    color: #666;
+    text-align: left;
+    padding: 0 1.2em;
+}
+
+#pslider a::after {
+    content: url(../images/btn_view.png);
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 320px;
+    background-color: rgba(255,0,0,0.5);
+    padding-top: 110px;
+    top: 320px;
+    transition: top 0.2s;
+}
+
+#pslider a:hover::after {
+    top: 0;
+}
+
+.pprev, .pnext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.pprev {
+    left: -50px;
+}
+
+.pnext {
+    right: -50px;
+}
+
+#okitchen {
+    background-color: #fffee5;
+    padding: 60px 0;
+}
+
+.obox {
+    width: 252px;
+    margin: 0 12px;
+}
+
+.obox img{
+    width: 100%;
+}
+
+.hash {
+    margin-top: 1.6em;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.hash span {
+    margin-right: 0.7em;
+}
+
+.hash span::before {
+    content: "#";
+}
+
+.obig {
+    color: #333;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#oslider{
+    margin-top: 30px;
+}
+
+#oslider a,
+.obox {
+    outline: none;
+}
+
+#obar {
+    margin-top: 30px;
+    height:  3px;
+    background-color: rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+#bar {
+    height: 3px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 2px;
+    width: 60%;
+}
+
+#sns {
+    padding: 60px 0;
+}
+
+#tabbtnbox {
+    height: 60px;
+    background-color: #ebeff2;
+    margin-bottom: 50px;
+}
+
+.tabbtn {
+    float: left;
+    width: 25%;
+    height: 60px;
+    font-size: 0.95em;
+    letter-spacing: -0.08em;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: relative;
+}
+
+.tabbtn:hover,
+.select {
+    background-color: #223a6a;
+    color: white;
+}
+
+.tabbtn:hover::before,
+.select::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #223a5a;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    bottom: -4px;
+}
+
+.tabbtn::after {
+    content: "|";
+    float: right;
+    margin-right: -3px;
+    color: #f7f7f7;
+}
+
+.tabbtn:last-of-type::after {
+    content: none;
+}
+
+.tabcont {
+    overflow: auto;
+    display: none;
+    padding: 5px 0;
+}
+
+.tabcont:first-of-type {
+    display: block;
+}
+
+.tabcont a {
+    float: left;
+    width: 25%;
+    padding: 0 4px;
+    color: #666;
+    font-size: 0.9em;
+    display: block;
+}
+
+.tabcont a img {
+    width: 100%;
+}
+
+.tabcont a p {
+    height: 3em;
+}
+
+@media all and (max-width: 1024px) {
+    .dots {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media all and (max-width: 1000px) {
+    #oslider, #obar {
+        width: calc(100% - 60px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media all and (max-width: 640px) {
+    #mv, .slide {
+        height: 420px;
+    }
+    .slide img {
+        height: 420px;
+    }
+    
+    #direct {
+        padding: 0 10px;
+    }
+    
+    .dbox {
+        width: calc((100% - 12px) / 2);
+        margin-bottom: 12px;
+    }
+    .dbox:nth-of-type(2n) {
+        margin-right: 0;
+    }
+    
+    #news {
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    
+    .nbox:nth-of-type(3),
+    .nbox:nth-of-type(4) {display: none;}
+    .nbox:nth-of-type(1) {
+        width: 160px;    
+    }
+    .nbox:nth-of-type(2) {
+        width: calc(100% - 172px);
+        margin-right: 0;
+    }
+    .nbig a {
+        height: 60px;
+        margin-top: 10px;
+    }
+    
+    #en {
+        padding: 0 10px;
+    }
+    #event, #newgood {
+        float: none;
+        width: 100%;
+    }
+    #event {
+        margin-bottom: 50px;
+    }
+    
+    #sns {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    #tabbtnbox {
+        overflow: auto;
+        height: auto;
+    }
+    .tabbtn {
+        width: 50%;
+    }
+    
+    .tabbtn::before,
+    .tabbtn::after,
+    .tabbtn:hover::before {
+        content: none;
+    }
+    
+    .tabcont a {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+}
+
+/*갤럭시fold 대응 400px~280px*/
+
+@media all and (max-width: 400px) {
+    #direct a .dbig {
+        font-size: 1.5em;
+        letter-spacing: -0.08em;
+    }
+    #news .nbox {
+        float: none;
+        width: 100%;
+    }
+    #news .nbox:first-of-type {
+        overflow: auto;
+        margin-bottom: 0px;
+    }
+    #news .nbox h3 {float: left;}
+    #more {
+    float: right;
+    margin-left: 0;
+    }
+}
+

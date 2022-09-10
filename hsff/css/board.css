@@ -1,0 +1,81 @@
+.search {
+    text-align: right;
+    margin-top: 25px;
+    margin-bottom: 13px;
+}
+
+#type {
+    display: none;
+}
+
+#typeclone {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#ttop {
+    height: 38px;
+    border: 1px solid #b3b3b3;
+    font-size: 0.95em;
+    line-height: 38px;
+    padding-left: 0.7em;
+    padding-right: 2.4em;
+    background-image: url(../images/ico_selectmenu.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+}
+
+#tbot {
+    position: absolute;
+    width: 100%;
+    border: 1px solid #b3b3b3;
+    background-color: white;
+    display: none;
+    text-align: left;
+}
+
+.titem {
+    padding: 0.5em;
+}
+
+.titem:hover {
+    background-color: #f9f9f9;
+}
+
+#searchtxt {
+    width: 200px;
+    height: 38px;
+    border: 1px solid #b3b3b3;
+    padding-left: 0.5em;
+    outline: none;
+}
+
+#searchtxt:hover,
+#searchtxt:focus {
+    background-color: #f9f9f9;
+}
+
+
+#typeclone, 
+#searchtxt,
+#searchbtn {
+    vertical-align: middle;
+}
+
+.pagination {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.pagination a {
+    color: #777;
+    margin: 11px;
+}
+
+
+.pagination .current {
+    color: black;
+    pointer-events: none;
+}
